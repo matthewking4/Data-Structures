@@ -1,0 +1,9 @@
+﻿  ApplicationStack.cpp
+C:\Users\Matt\source\repos\ApplicationStack\ApplicationStack\StackDemo.h(65,19): warning C4101: 'data': unreferenced local variable
+C:\Users\Matt\source\repos\ApplicationStack\ApplicationStack\StackDemo.h(65,14): warning C4101: 'key': unreferenced local variable
+  Generating code
+  10 of 118 functions ( 8.5%) were compiled, the rest were copied from previous compilation.
+    7 functions were new in current compilation
+    1 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  ApplicationStack.vcxproj -> C:\Users\Matt\source\repos\ApplicationStack\Release\ApplicationStack.exe

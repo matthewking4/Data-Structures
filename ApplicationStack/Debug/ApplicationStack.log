@@ -1,0 +1,4 @@
+﻿  ApplicationStack.cpp
+C:\Users\Matt\source\repos\ApplicationStack\ApplicationStack\ApplicationStack.cpp(42,19): warning C4101: 'data': unreferenced local variable
+C:\Users\Matt\source\repos\ApplicationStack\ApplicationStack\ApplicationStack.cpp(42,14): warning C4101: 'key': unreferenced local variable
+  ApplicationStack.vcxproj -> C:\Users\Matt\source\repos\ApplicationStack\Debug\ApplicationStack.exe
