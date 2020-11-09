@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="NavigationStack">
+    <Position X="4.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAEAAAAgAAACAwAAACAAAAAAAACAAAACAA=</HashCode>
+      <FileName>NavigationStack.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="top" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="PriorityPageQueue">
+    <Position X="10" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAABACAEAAAAAAAABAQAgAAAAAAIAAAAQAAACAA=</HashCode>
+      <FileName>PriorityPageQueue.h</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="pages" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="BasePage">
+    <Position X="7.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAABAAAIAAAAAAAQAAAAAAAAgEAAAAAA=</HashCode>
+      <FileName>BasePage.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="HomePage">
+    <Position X="4" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>HomePage.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="InformationPage">
+    <Position X="8.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InformationPage.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VideoPage">
+    <Position X="10.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>VideoPage.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ViewPage">
+    <Position X="6.25" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ViewPage.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

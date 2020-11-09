@@ -146,11 +146,14 @@
     <ClInclude Include="HomePage.h" />
     <ClInclude Include="InformationPage.h" />
     <ClInclude Include="NavigationStack.h" />
-    <ClInclude Include="PriorityQueue.h" />
+    <ClInclude Include="PriorityPageQueue.h" />
     <ClInclude Include="QueueDemo.h" />
     <ClInclude Include="StackDemo.h" />
     <ClInclude Include="VideoPage.h" />
     <ClInclude Include="ViewPage.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

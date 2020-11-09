@@ -26,9 +26,6 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="PriorityQueue.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="BasePage.h">
       <Filter>Header Files\Pages</Filter>
     </ClInclude>
@@ -53,5 +50,11 @@
     <ClInclude Include="NavigationStack.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="PriorityPageQueue.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>

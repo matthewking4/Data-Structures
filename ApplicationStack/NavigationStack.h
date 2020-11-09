@@ -1,15 +1,74 @@
 #pragma once
+#include "BasePage.h"
 using namespace std;
 
-template <class T>
-class Stack {
+class NavigationStack {
+private: 
+	BasePage* top;
 public:
-	T* top;
-
-	Stack() {
+	// Constuctor assign default
+	NavigationStack() {
 		top = NULL;
 	}
 
+	// Destructor nullifies values
+	~NavigationStack() {
+		top = NULL;
+	}
+
+	bool Push(BasePage* newPage) {
+		if (top) { // if top is not Null
+			BasePage* oldPage = top; //oldPage is asigned to the top value
+			top = newPage; // top is now asigned to the new page provided within the parameter
+			newPage->previous = oldPage; // Linked List updated to contain the oldPage value
+			cout << "\n**************" << endl;
+			cout << newPage->title << " PUSHED successfully" << endl; // informative log
+			cout << "**************\n" << endl;
+			return true; // return true to inform about its success with pushing page
+		}
+		else { //if Null (default)
+			top = newPage; // asign top to the newPage parameter
+			cout << "\n**************" << endl;
+			cout << newPage->title << " PUSHED successfully" << endl; // informative log
+			cout << "**************\n" << endl;
+			return true; // return true to inform about its success with pushing page
+		}
+	}
+
+	// Method to Peek value on top of stack
+	BasePage* Peek() {
+		if (IsEmpty()) { // If the stack is empty
+			cout << "No Items to PEEK from the stack" << endl; // log informational ouput
+			return NULL; // return null so imported pages can error handle. Could also throw. 
+		}
+		return top; // if the array is not empty, the value on top of the stack is returned
+	}
+
+	// Method to Pop values on top of the stack
+	BasePage* Pop() {
+		if (IsEmpty()) {
+			cout << "No Items to POP from the stack" << endl;
+			return NULL;
+		}
+		else {
+			BasePage* currentPage = top; // assign current page to the value on top of the stack
+			top = top->previous;  // top will now equal the previous page
+			return currentPage; // return current page as it is the popped value. Most navigation stacks will remove and disregard the popped value.
+		}
+	}
+
+	// Method to that returns an int of the total number of pages in the stack
+	int Count() {
+		int count = 0; // asign initial count
+		BasePage* currentPage = top; // assign current page to the value on top of the stack
+		while (currentPage != NULL) { // if the current page is not null
+			count++; // increment count
+			currentPage = currentPage->previous; // the new current page is asigned via the linked list previous pointer
+		}
+		return count; // When the while loop breaks due to page being null, return count
+	}
+
+	// Method to check if Stack is empty and return bool
 	bool IsEmpty() {
 		if (top == NULL) {
 			return true;
@@ -17,84 +76,16 @@ public:
 		return false;
 	}
 
-	bool CheckIfPageExist(T* n) {
-		T* currentPage = top;
-		bool exist = false;
-		while (currentPage != NULL) {
-			if (currentPage->title == n->title) {
-				exist = true;
-				break;
-			}
-			currentPage = currentPage->previous;
-		}
-		return exist;
-	}
 
-	bool Push(T* newPage) {
-		if (top == NULL) {
-			top = newPage;
-			cout << "\n=============" << endl;
-			cout << newPage->title << " PUSHED successfully" << endl;
-			cout << "=============\n" << endl;
-			return true;
-		}
-		else if (CheckIfPageExist(newPage)) {
-			cout << "\n=============" << endl;
-			cout << newPage->title << " already exist within the stack. Please use POP to access the desired page" << endl;
-			cout << "=============\n" << endl;
-			return false;
-		}
-		else {
-			T* oldPage = top;
-			top = newPage;
-			newPage->previous = oldPage;
-			cout << "\n=============" << endl;
-			cout << newPage->title << " PUSHED successfully" << endl;
-			cout << "=============\n" << endl;
-			return true;
-		}
-	}
-
-	T* Pop() {
-		T* currentPage = NULL;
-		if (IsEmpty()) {
-			cout << "No Items to POP from the stack" << endl;
-			return NULL;
-		}
-		else {
-			currentPage = top;
-			top = top->previous;
-			return currentPage;
-		}
-	}
-
-	T* Peek() {
-		if (IsEmpty()) {
-			cout << "No Items to PEEK from the stack" << endl;
-			return NULL;
-		}
-		return top;
-	}
-
-	int Count() {
-		int count = 0;
-		T* currentPage = top;
-		while (currentPage != NULL) {
-			count++;
-			currentPage = currentPage->previous;
-		}
-		return count;
-	}
-
-	void Display() {
-		cout << "\n=============" << endl;
+	// Method to display all items within the stack
+	void History() {
+		cout << "\n**************" << endl;
 		cout << "Avalible Pages on the Stack: " << endl;
-		T* currentPage = top;
-		while (currentPage != NULL) {
-			cout << currentPage->title << endl;
-			currentPage = currentPage->previous;
+		BasePage* currentPage = top; // assign current page to the value on top of the stack
+		while (currentPage != NULL) { // if the current page is not null
+			cout << currentPage->title << endl; // log the title
+			currentPage = currentPage->previous; // the new current page is asigned via the linked list previous pointer
 		}
-		cout << "=============\n" << endl;
+		cout << "**************\n" << endl;
 	}
-
 };
