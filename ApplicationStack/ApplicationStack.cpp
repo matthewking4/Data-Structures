@@ -6,14 +6,14 @@
 using namespace std;
 
 int main() {
-	int command; // Int of the inital command
+	int command; // Int of the initial command
 
 	do {
 		NavigationStack stack; // declare Stack
 		system("cls");
 		cout << "********************************************\n";
 		cout << "Welcome to the Navigation System!\n";
-		cout << "Plase Enter the number of the operation you wish to perform\n";
+		cout << "Please Enter the number of the operation you wish to perform\n";
 		cout << "1. Navigation Queue and Navigation Stack Functionality" << endl;
 		cout << "2. Exit" << endl;
 		cout << "********************************************\n\n";

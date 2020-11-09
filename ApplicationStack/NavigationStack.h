@@ -27,7 +27,7 @@ public:
 			return true; // return true to inform about its success with pushing page
 		}
 		else { //if Null (default)
-			top = newPage; // asign top to the newPage parameter
+			top = newPage; // assign top to the newPage parameter
 			cout << "\n**************" << endl;
 			cout << newPage->title << " PUSHED successfully" << endl; // informative log
 			cout << "**************\n" << endl;
@@ -80,7 +80,7 @@ public:
 	// Method to display all items within the stack
 	void History() {
 		cout << "\n**************" << endl;
-		cout << "Avalible Pages on the Stack: " << endl;
+		cout << "Available Pages on the Stack: " << endl;
 		BasePage* currentPage = top; // assign current page to the value on top of the stack
 		while (currentPage != NULL) { // if the current page is not null
 			cout << currentPage->title << endl; // log the title

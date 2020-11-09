@@ -4,14 +4,14 @@ using namespace std;
 // Superclass for all pages
 class BasePage {
 public:
-	int prioriy; // priority int
+	int priority; // priority int
 	std::string title; // title value for UI and demonstration
 	BasePage* previous; // Linked List previous page
-	BasePage(int p) { prioriy = p; }; // constructor asigns priority
+	BasePage(int p) { priority = p; }; // constructor assigns priority
 	~BasePage() { }; // destructor
 
-	// Method to provide greater than oporator to compare priorities
+	// Method to provide greater than operator to compare priorities
 	bool operator>(const BasePage& newPage) {
-		return this->prioriy > newPage.prioriy;
+		return this->priority > newPage.priority;
 	}
 };

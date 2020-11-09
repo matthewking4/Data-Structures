@@ -7,7 +7,7 @@ class PriorityPageQueue {
 	BasePage** pages;
 	int current;
 public:
-	// Constructor takes size int as parameter an assigns the inital values for the arrays
+	// Constructor takes size int as parameter and assigns the initial values for the arrays
 	PriorityPageQueue(int s) {
 		pages = new BasePage * [s];
 		arrSize = s;
