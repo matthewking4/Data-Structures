@@ -16,7 +16,7 @@ void StackCommands() {
 	cout << "2. Go Back" << endl;
 	cout << "3. View if the stack is empty" << endl;
 	cout << "4. View current page" << endl;
-	cout << "5. View ammount of pages in stack" << endl;
+	cout << "5. View amount of pages in stack" << endl;
 	cout << "6. History" << endl;
 	cout << "7. Clear Screen" << endl;
 	cout << "8. Show operation commands" << endl;
@@ -78,7 +78,7 @@ void StackDemo(NavigationStack stack) {
 		{
 			BasePage* page = stack.Pop(); // Pop page from stack
 			if (page) {
-				cout << "Page POPPED from the stack - Currrent page is: " << page->title << endl; // logs the popped value
+				cout << "Page POPPED from the stack - Current page is: " << page->title << endl; // logs the popped value
 				delete page; // deletes page and releases obtained memory
 			}
 			break;

@@ -48,7 +48,7 @@ void QueueStackDemo(NavigationStack stack) {
 			cout << p->title << " removed" << endl; // Removes the first entry from the queue
 			break;
 		}
-		case 3: // queue.Peak()
+		case 3: // queue.Peek()
 		{
 			BasePage* p = queue.Peek();
 			cout << p->title << " is at the front of queue" << endl; // Returns the it at the beginning of the queue
@@ -67,8 +67,8 @@ void QueueStackDemo(NavigationStack stack) {
 			bool result = true; // result bool of true - this will allow the while loop to run
 			do {
 				BasePage* element = queue.Remove(); // removes the first entry from the queue
-				result = stack.Push(element); // push removed item into stack and asign the result
-			} while (!queue.IsEmpty() && result); // if the queue isn empty and the result is true - continue
+				result = stack.Push(element); // push removed item into stack and assign the result
+			} while (!queue.IsEmpty() && result); // if the queue isnt empty and the result is true - continue
 			break;
 		}
 		case 7:

@@ -6,7 +6,7 @@ class NavigationStack {
 private: 
 	BasePage* top;
 public:
-	// Constuctor assign default
+	// Constructor assign default
 	NavigationStack() {
 		top = NULL;
 	}
@@ -18,8 +18,8 @@ public:
 
 	bool Push(BasePage* newPage) {
 		if (top) { // if top is not Null
-			BasePage* oldPage = top; //oldPage is asigned to the top value
-			top = newPage; // top is now asigned to the new page provided within the parameter
+			BasePage* oldPage = top; //oldPage is assigned to the top value
+			top = newPage; // top is now assigned to the new page provided within the parameter
 			newPage->previous = oldPage; // Linked List updated to contain the oldPage value
 			cout << "\n**************" << endl;
 			cout << newPage->title << " PUSHED successfully" << endl; // informative log
@@ -38,7 +38,7 @@ public:
 	// Method to Peek value on top of stack
 	BasePage* Peek() {
 		if (IsEmpty()) { // If the stack is empty
-			cout << "No Items to PEEK from the stack" << endl; // log informational ouput
+			cout << "No Items to PEEK from the stack" << endl; // log informational output
 			return NULL; // return null so imported pages can error handle. Could also throw. 
 		}
 		return top; // if the array is not empty, the value on top of the stack is returned
@@ -59,11 +59,11 @@ public:
 
 	// Method to that returns an int of the total number of pages in the stack
 	int Count() {
-		int count = 0; // asign initial count
+		int count = 0; // assign initial count
 		BasePage* currentPage = top; // assign current page to the value on top of the stack
 		while (currentPage != NULL) { // if the current page is not null
 			count++; // increment count
-			currentPage = currentPage->previous; // the new current page is asigned via the linked list previous pointer
+			currentPage = currentPage->previous; // the new current page is assigned via the linked list previous pointer
 		}
 		return count; // When the while loop breaks due to page being null, return count
 	}
@@ -84,7 +84,7 @@ public:
 		BasePage* currentPage = top; // assign current page to the value on top of the stack
 		while (currentPage != NULL) { // if the current page is not null
 			cout << currentPage->title << endl; // log the title
-			currentPage = currentPage->previous; // the new current page is asigned via the linked list previous pointer
+			currentPage = currentPage->previous; // the new current page is assigned via the linked list previous pointer
 		}
 		cout << "**************\n" << endl;
 	}

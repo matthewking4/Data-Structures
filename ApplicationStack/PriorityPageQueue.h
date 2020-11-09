@@ -7,7 +7,7 @@ class PriorityPageQueue {
 	BasePage** pages;
 	int current;
 public:
-	// Constuctor takes size int as parameter an asigns the inital values for the arrays
+	// Constructor takes size int as parameter an assigns the inital values for the arrays
 	PriorityPageQueue(int s) {
 		pages = new BasePage * [s];
 		arrSize = s;
@@ -25,7 +25,7 @@ public:
 	void Push(BasePage* page) {
 		// Queue is empty
 		if (IsEmpty()) {
-			pages[current++] = page; // Increment pages array and asign its value to the page parameter
+			pages[current++] = page; // Increment pages array and assign its value to the page parameter
 		}
 		// Queue is full
 		else if (IsFull()) {
